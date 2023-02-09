@@ -12,7 +12,7 @@ the console for airbnb project. Create a command interpreter that can modify or 
   
 
 ```htm
-# ![image](https://user-images.githubusercontent.com/110449714/217719608-8dc4013a-d104-4169-ba4e-f7cda7fe5681.png)
+image.png
 
 ```
 # Requirements
