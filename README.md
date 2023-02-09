@@ -115,9 +115,8 @@ EOF  help  quit
 (hbnb)<F11><F11>
 $
 ```
-```
-# # Authors
-```python
+
+# Authors
+
   - ISAAC RONNEY WINGA - 1Ronney
   - MUMBUA MUTUKU - mumbuamutuku
-```
