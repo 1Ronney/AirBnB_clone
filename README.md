@@ -1,13 +1,13 @@
 # AirBnB_clone - The Console 
-the console for airbnb project. Create a command interpreter that can modify or delete the database The users like the administrator of the app Airbnb clone has the posibility of the manipulate objects and data of the application, this objects are:
-
-Users
-Places
-States
-Cities
-Amenities
-Reviews
-alt text
+the console for airbnb project. Create a command interpreter that can modify or delete the database The users like the administrator of the app Airbnb clone has the posibility manipulatin objects and data of the application, this objects are:
+  Users
+  Places
+  States
+  Cities
+  Amenities
+  Reviews
+  alt text
+![image](https://user-images.githubusercontent.com/110449714/217719608-8dc4013a-d104-4169-ba4e-f7cda7fe5681.png)
 
 Requirements
 Python Scripts
