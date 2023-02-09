@@ -81,7 +81,8 @@ $$ ./console.py
 **Example**
 ```
 Interactive mode: 
-```json
+
+```python
 $ ./console.py
 (hbnb) help
 Documented commands (type help <topic>):
@@ -92,8 +93,10 @@ EOF  help  quit
 (hbnb) quit
 $
 ```
+
 non-interactive mode:
-```json
+
+```python
 $ echo "help" | ./console.py
 (hbnb)
 Documented commands (type help <topic>):
@@ -111,6 +114,7 @@ Documented commands (type help <topic>):
 EOF  help  quit
 (hbnb)<F11><F11>
 $
+```
 ```
 # Authors
   ```python
