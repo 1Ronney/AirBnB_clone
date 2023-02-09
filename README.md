@@ -116,8 +116,8 @@ EOF  help  quit
 $
 ```
 ```
-# Authors
-  ```python
+# # Authors
+```python
   - ISAAC RONNEY WINGA - 1Ronney
   - MUMBUA MUTUKU - mumbuamutuku
-  ```
+```
