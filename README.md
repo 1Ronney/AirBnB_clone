@@ -1,21 +1,24 @@
 # AirBnB_clone - The Console 
 the console for airbnb project. Create a command interpreter that can modify or delete the database The users like the administrator of the app Airbnb clone has the posibility manipulatin objects and data of the application, this objects are:
-  1. Users
-  2. Places
-  3. States
-  4. Cities
-  5. Amenities
-  6. Reviews
-  7. alt text
+   ```python
+   '.'Users
+   '.'Places
+   '.'States
+   '.'Cities
+   '.'Amenities
+   '.'Reviews
+   '.'alt text
+   ```
   
 
-![image]
+```htm
+# ![image](https://user-images.githubusercontent.com/110449714/217719608-8dc4013a-d104-4169-ba4e-f7cda7fe5681.png)
 
-(https://user-images.githubusercontent.com/110449714/217719608-8dc4013a-d104-4169-ba4e-f7cda7fe5681.png)
-
-#Requirements
-#!Python Scripts
-    Allowed editors: vi, vim, emacs
+```
+# Requirements
+## Python Scripts
+```python
+Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
 All your files should end with a new line
 The first line of all your files should be exactly #!/usr/bin/python3
@@ -26,9 +29,11 @@ The length of your files will be tested using wc
 All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
 All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+```
 
-#python unittest
+## Python unittest
 
+```python
 Allowed editors: vi, vim, emacs
 All your files should end with a new line
 All your test files should be inside a folder tests
@@ -44,19 +49,71 @@ All your modules should have a documentation (python3 -c 'print(__import__("my_m
 All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 We strongly encourage you to work together on test cases, so that you don’t miss any edge 
+```
 
-#Installation 
-!To use this console:
- ' *'Linux Ubuntu 14.04.3 LTS or higher is required
-  '*'Python 3.7 or higher is required
+## Installation 
+To use this console:
+  - Linux Ubuntu 14.04.3 LTS or higher is required
+  - Python 3.7 or higher is required
 
-#Files 
+## #Files 
 
+- HBNHCommand: console.py
+- Amenity: models/amenity.py
+- BaseModel: models/base_model.py
+- City: models/city.py
+- models.init : models/init.py
+- Place: models/place.py
+- Review: models/review.py
+- State: models/state.py
+- User: models/user.py
+- FileStorage: models/engine/file_storage.py
+- engine.init: models/engine/init.py
 
+```python
+How To run the command interpreter:
+```
+```htm
+$$ ./console.py
+```
 
-
+```python
+**Example**
+```
+Interactive mode: 
+```json
+$ ./console.py
+(hbnb) help
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb)
+(hbnb)
+(hbnb) quit
+$
+```
+non-interactive mode:
+```json
+$ echo "help" | ./console.py
+(hbnb)
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+(hbnb) 
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+Documented commands (type help <topic>):
+================<F11>========================
+EOF  help  quit
 (hbnb)<F11><F11>
 $
-#Authors
-  - ISAAC RONNEY WINGA
-  - MUMBUA MUTUKU
+```
+# Authors
+  ```json
+  - ISAAC RONNEY WINGA - 1Ronney
+  - MUMBUA MUTUKU - mumbuamutuku
+  ```
