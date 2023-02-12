@@ -19,7 +19,7 @@ from models.state import State
 class HBNBCommand(cmd.Cmd):
     """ Command line class for A console"""
 
-    prompt = '(A)'
+    prompt = '(hbnb)'
 
     def do_create(self, args):
         """USage: Create ClassName"""
