@@ -1,54 +1,49 @@
 #!/usr/bin/python3
-"""
-BaseModel Module
-"""
+"""Defines the BaseModel class."""
+import models
+from uuid import uuid4
 from datetime import datetime
-import uuid
 
 
-class BaseModel():
-    """ BaseModel class """
+class BaseModel:
+    """Represents the BaseModel of the HBnB project."""
 
     def __init__(self, *args, **kwargs):
-        """ initializes instance attributes """
-        time = '%Y-%m-%d %H:%M:%S.%f'
-        dict_found = 0
-        for item in args:
-            if type(item) is dict:
-                dict_found = 1
-                self.__dict__ = item
-                self.created_at = datetime.strptime(item['created_at'], time)
-                if hasattr(item, 'updated_at'):
-                    self.updated_at = datetime.strptime
-                    (item['updated_at'], time)
-        if dict_found == 0:
-            self.created_at = datetime.now()
-            self.id = str(uuid.uuid4())
-            from models.__init__ import storage
-            storage.new(self)
+        """Initialize a new BaseModel.
+        Args:
+            *args (any): Unused.
+            **kwargs (dict): Key/value pairs of attributes.
+        """
+        tform = "%Y-%m-%dT%H:%M:%S.%f"
+        self.id = str(uuid4())
+        self.created_at = datetime.today()
+        self.updated_at = datetime.today()
+        if len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "created_at" or k == "updated_at":
+                    self.__dict__[k] = datetime.strptime(v, tform)
+                else:
+                    self.__dict__[k] = v
+        else:
+            models.storage.new(self)
 
     def save(self):
-        """
-        updates the public instance attribute updated_at
-        with the current datetime
-        """
-        self.updated_at = datetime.now()
-        from models.__init__ import storage
-        storage.save()
+        """Update updated_at with the current datetime."""
+        self.updated_at = datetime.today()
+        models.storage.save()
 
-    def to_json(self):
+    def to_dict(self):
+        """Return the dictionary of the BaseModel instance.
+        Includes the key/value pair __class__ representing
+        the class name of the object.
         """
-        returns a dictionary containing all keys/values of __dict__
-        of the instance + the class name in the key __class__
-        """
-        newdict = self.__dict__.copy()
-        newdict.update({'__class__': self.__class__.__name__})
-        if hasattr(self, 'updated_at'):
-            newdict.update({'updated_at': str(self.updated_at)})
-        newdict.update({'created_at': str(self.created_at)})
-        return newdict
+        rdict = self.__dict__.copy()
+        rdict["created_at"] = self.created_at.isoformat()
+        rdict["updated_at"] = self.updated_at.isoformat()
+        rdict["__class__"] = self.__class__.__name__
+        return rdict
 
     def __str__(self):
-        """ prints [<class name>] (<self.id>) <self.__dict__> """
-        return "[{}] ({}) {}".format(self.__class__.__name__,
-                                     self.id, self.__dict__)
+        """Return the print/str representation of the BaseModel instance."""
+        clname = self.__class__.__name__
+        return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
