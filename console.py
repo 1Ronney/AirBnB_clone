@@ -16,7 +16,7 @@ from models.review import Review
 from models.state import State
 
 
-class ACommand(cmd.Cmd):
+class HBNBCommand(cmd.Cmd):
     """ Command line class for A console"""
 
     prompt = '(A)'
@@ -137,4 +137,4 @@ if __name__ == '__main__':
     classes = {'BaseModel': BaseModel, 'User': User, 'City': City,
                'Review': Review, 'Amenity': Amenity, 'Place': Place,
                'State': State}
-    ACommand().cmdloop()
+    HBNBCommand().cmdloop()
