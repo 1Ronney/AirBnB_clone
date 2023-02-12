@@ -6,14 +6,11 @@ from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """ City Class"""
+    """ City Class
+     Attributes:
+        state_id (str): The state id.
+        name (str): The name of the city.
+        """
 
     state_id = ""
     name = ""
-
-    def __init__(self, *args, **kwargs):
-        """ initializes parent class"""
-        if args and type(args[0]) is dict:
-            BaseModel.__init__(self, args[0])
-        else:
-            BaseModel.__init__(self)
